@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <title> Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <script id="index-data" type="application/json">
+    [
+    {
+      "title": "Work",
+      "timeframes": {
+        "daily": {
+          "current": 5,
+          "previous": 7
+        },
+        "weekly": {
+          "current": 32,
+          "previous": 36
+        },
+        "monthly": {
+          "current": 103,
+          "previous": 128
+        }
+      }
+    },
+    {
+      "title": "Play",
+      "timeframes": {
+        "daily": {
+          "current": 1,
+          "previous": 2
+        },
+        "weekly": {
+          "current": 10,
+          "previous": 8
+        },
+        "monthly": {
+          "current": 23,
+          "previous": 29
+        }
+      }
+    },
+    {
+      "title": "Study",
+      "timeframes": {
+        "daily": {
+          "current": 0,
+          "previous": 1
+        },
+        "weekly": {
+          "current": 4,
+          "previous": 7
+        },
+        "monthly": {
+          "current": 13,
+          "previous": 19
+        }
+      }
+    },
+    {
+      "title": "Exercise",
+      "timeframes": {
+        "daily": {
+          "current": 1,
+          "previous": 1
+        },
+        "weekly": {
+          "current": 4,
+          "previous": 5
+        },
+        "monthly": {
+          "current": 11,
+          "previous": 18
+        }
+      }
+    },
+    {
+      "title": "Social",
+      "timeframes": {
+        "daily": {
+          "current": 1,
+          "previous": 3
+        },
+        "weekly": {
+          "current": 5,
+          "previous": 10
+        },
+        "monthly": {
+          "current": 21,
+          "previous": 23
+        }
+      }
+    },
+    {
+      "title": "Self Care",
+      "timeframes": {
+        "daily": {
+          "current": 0,
+          "previous": 1
+        },
+        "weekly": {
+          "current": 2,
+          "previous": 2
+        },
+        "monthly": {
+          "current": 7,
+          "previous": 11
+        }
+      }
+    }]
+  </script>
+<script src="index.js"></script>
+  <div class="parent">
+    <div class="div1">
+      <div class="wrap">
+        <img src="images/image-jeremy.png" alt="jeremy-image">
+        <p>Report for</p>
+        <h1>Jeremy Robson</h1>
+      </div>
+      <div class="block">
+        <span id="day"><a href="#">Daily</a></span>
+        <span id="week"><a href="#">Weekly</a></span>
+        <span id="month"><a href="#">Monthly</a></span>
+      </div>
+    </div>
+    <div class="div2">
+      <div class="color">
+        <img src="images/icon-work.svg" alt="">
+      </div>
+      <div class="work">
+        <div class="day-work" id="day-work">
+          <div class="en">
+            <div class="txt">Work</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>5hrs</h1> <!-- daily -->
+            <div class="txt3">Last day - 7hrs</div>
+          </div> <!-- daily -->
+        </div>
+        <div class="week-work" id="week-work">
+          <div class="en">
+            <div class="txt">Work</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>32hrs</h1> <!-- weekly -->
+            <div class="txt3">Last week - 36hrs</div>
+          </div> <!-- weekly -->
+        </div><div class="month-work" id="month-work">
+          <div class="en">
+            <div class="txt">Work</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>103hrs</h1> <!-- monthly  -->
+            <div class="txt3">Last month - 128hrs</div>
+          </div><!-- monthly -->
+        </div>
+        
+        
+      </div>
+    </div>
+    <div class="div3">
+      <div class="color1">
+        <img src="images/icon-play.svg" alt="">
+      </div>
+      <div class="play">
+        <div  id="day-play">
+          <div class="en">
+            <div class="txt">Play</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>1hrs</h1> <!-- daily -->
+            <div class="txt3">Last day - 2hrs</div>
+          </div> <!-- daily -->
+        </div>
+        <div  id="week-play">
+          <div class="en">
+            <div class="txt">Play</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>10hrs</h1> <!-- daily -->
+            <div class="txt3">Last week - 8hrs</div>
+          </div> <!-- daily -->
+        </div>
+        <div  id="month-play">
+          <div class="en">
+            <div class="txt">Play</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>23hrs</h1> <!-- daily -->
+            <div class="txt3">Last month - 29hrs</div>
+          </div> <!-- daily -->
+        </div>
+      
+      </div>
+    </div>
+    <div class="div4">
+      <div class="color2">
+        <img src="images/icon-study.svg" alt="">
+      </div>
+      <div class="study">
+        <div  id="day-study">
+          <div class="en">
+            <div class="txt">Study</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>0hrs</h1> <!-- daily -->
+            <div class="txt3">Last day - 1hrs</div>
+          </div><!-- daily -->
+        </div>
+        <div  id="week-study">
+          <div class="en">
+            <div class="txt">Study</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>4hrs</h1> <!-- daily -->
+            <div class="txt3">Last week - 7hrs</div>
+          </div> <!-- daily -->
+        </div>
+        <div  id="month-study">
+          <div class="en">
+            <div class="txt">Study</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>13hrs</h1> <!-- daily -->
+            <div class="txt3">Last month - 19hrs</div>
+          </div> <!-- daily -->
+        </div>
+        
+      </div>
+    </div>
+    <div class="div5">
+      <div class="color3">
+        <img src="images/icon-exercise.svg" alt="">
+      </div>
+      <div class="exercice">
+        <div  id="day-exercise">
+          <div class="en">
+            <div class="txt">Exercise</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>1hrs</h1> <!-- daily -->
+            <div class="txt3">Last day - 1hrs</div>
+          </div><!-- daily -->
+        </div>
+        <div  id="week-exercise">
+          <div class="en">
+            <div class="txt">Exercise</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>9hrs</h1> <!-- daily -->
+            <div class="txt3">Last week - 3hrs</div>
+          </div> <!-- daily -->
+        </div>
+        <div  id="month-exercise">
+          <div class="en">
+            <div class="txt">Exercise</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>15hrs</h1> <!-- daily -->
+            <div class="txt3">Last month - 12hrs</div>
+          </div> <!-- daily -->
+        </div>
+      </div>
+    </div>
+    <div class="div6">
+      <div class="color4">
+        <img src="images/icon-social.svg" alt="">
+      </div>
+      <div class="social">
+        <div  id="day-social">
+          <div class="en">
+            <div class="txt">Social</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>10hrs</h1> <!-- daily -->
+            <div class="txt3">Last day - 11hrs</div>
+          </div> <!-- daily -->
+        </div>
+        <div  id="week-social">
+          <div class="en">
+            <div class="txt">Social</div>
+            <div class="ecar">...</div>
+          <div class="mobil1"></div></div>
+          <div class="mobil1">
+            <div class="mobil1">
+              <h1>4hrs</h1> <!-- daily -->
+              <div class="txt3">Last week - 17hrs</div>
+            </div>
+          </div> <!-- daily -->
+        </div>
+        <div  id="month-social">
+          <div class="en">
+            <div class="txt">Social</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>13hrs</h1> <!-- daily -->
+            <div class="txt3">Last month - 19hrs</div>
+          </div> <!-- daily -->
+        </div>
+        
+      </div>
+    </div>
+    <div class="div7">
+      <div class="color5">
+        <img src="images/icon-self-care.svg" alt="">
+      </div>
+      <div class="selfcare">
+        <div  id="day-selfcare">
+          <div class="en">
+            <div class="txt">Self-care</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>11hrs</h1> <!-- daily -->
+            <div class="txt3">Last day - 10hrs</div>
+          </div> <!-- daily -->
+        </div>
+        <div  id="week-selfcare">
+          <div class="en">
+            <div class="txt">Study</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <div class="mobil1">
+              <h1>14hrs</h1> <!-- daily -->
+              <div class="txt3">Last week - 3hrs</div>
+            </div>
+          </div> <!-- daily -->
+        </div>
+        <div  id="month-selfcare">
+          <div class="en">
+            <div class="txt">Study</div>
+            <div class="ecar">...</div>
+          </div>
+          <div class="mobil1">
+            <h1>9hrs</h1> <!-- daily -->
+            <div class="txt3">Last month - 14hrs</div>
+          </div> <!-- daily -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
